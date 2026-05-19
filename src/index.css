@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 2%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3%;
+    --popover-foreground: 0 0% 98%;
+    
+    /* Warm solar orange primary */
+    --primary: 24.6 95% 53.1%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Deep space accent */
+    --secondary: 240 4% 10%;
+    --secondary-foreground: 0 0% 98%;
+    
+    --muted: 240 4% 10%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 30 90% 40%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 4% 10%;
+    --input: 240 4% 10%;
+    --ring: 24.6 95% 53.1%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted));
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.5);
+}
+
+/* Advanced Glassmorphism utilities */
+.glass-panel {
+  @apply bg-black/40 backdrop-blur-2xl border border-white/5 shadow-[0_8px_32px_rgba(0,0,0,0.5)];
+}
+.glass-card {
+  @apply bg-white/[0.02] hover:bg-white/[0.04] backdrop-blur-xl border border-white/5 shadow-xl transition-all duration-300;
+}
+.solar-glow {
+  @apply relative;
+}
+.solar-glow::before {
+  content: '';
+  @apply absolute -inset-0.5 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl blur opacity-20 transition duration-1000;
+}
+.solar-glow:hover::before {
+  @apply opacity-40 duration-300;
+}
