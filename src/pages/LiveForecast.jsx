@@ -6,7 +6,7 @@ import { jsPDF } from 'jspdf';
 import { AreaChart, Area, ResponsiveContainer, YAxis, XAxis, Tooltip, CartesianGrid } from 'recharts';
 import { useLiveStore } from '../store/useLiveStore';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://127.0.0.1:8000';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://65.0.89.218:8000';
 
 const getBase64ImageFromUrl = async (imageUrl) => {
   try {
