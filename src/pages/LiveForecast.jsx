@@ -6,7 +6,7 @@ import { jsPDF } from 'jspdf';
 import { AreaChart, Area, ResponsiveContainer, YAxis, XAxis, Tooltip, CartesianGrid } from 'recharts';
 import { useLiveStore } from '../store/useLiveStore';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://solarflare.anjan.top';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://api.anjan.top';
 
 const getBase64ImageFromUrl = async (imageUrl) => {
   try {
