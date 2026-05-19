@@ -6,7 +6,7 @@ import { jsPDF } from 'jspdf';
 import { ResponsiveContainer, RadialBarChart, RadialBar, PolarAngleAxis } from 'recharts';
 import { useCsvStore } from '../store/useCsvStore';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://65.0.89.218:8000';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://65.0.89.218';
 
 const getBase64ImageFromUrl = async (imageUrl) => {
   try {
