@@ -6,7 +6,7 @@ import { jsPDF } from 'jspdf';
 import { ResponsiveContainer, RadialBarChart, RadialBar, PolarAngleAxis } from 'recharts';
 import { useCsvStore } from '../store/useCsvStore';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://solar-flare-backend.onrender.com/';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://solar-flare-backend.onrender.com';
 
 const getBase64ImageFromUrl = async (imageUrl) => {
   try {
